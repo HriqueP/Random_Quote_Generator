@@ -2,8 +2,14 @@
 
 :root {
   --bg: #115e59;
+
+  --container-bg: #ffffff;
+
+  --btn-bg: #059669;
+  --btn-text-color: #ffffff;
 }
 
+/* Global */
 * {
   margin: 0;
   padding: 0;
@@ -28,17 +34,34 @@ button:hover {
   cursor: pointer;
 }
 
-div {
+/* div {
   border: 2px solid black;
-}
+} */
 
 .container {
-  background-color: #ffffff;
+  background-color: var(--container-bg);
   display: flex;
   flex-direction: column;
   padding: 20px;
   gap: 20px;
   border-radius: 15px;
+}
+
+.quote {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.author {
+  align-self: flex-end;
+}
+
+.btn-new-quote {
+  background-color: var(--btn-bg);
+  padding: 0.25rem 1.25rem;
+  border-radius: 15px;
+  color: var(--btn-text-color);
 }
 
 @media (min-width: 320px) {
@@ -47,8 +70,8 @@ div {
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .container {
-    width: 820px;
+    width: 600px;
   }
 }
