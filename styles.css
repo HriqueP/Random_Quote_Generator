@@ -34,10 +34,6 @@ button:hover {
   cursor: pointer;
 }
 
-/* div {
-  border: 2px solid black;
-} */
-
 .container {
   background-color: var(--container-bg);
   display: flex;
@@ -62,6 +58,19 @@ button:hover {
 
 .author {
   align-self: flex-end;
+  font-style: italic;
+}
+
+.btns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-copy-quote {
+  display: flex;
+  padding: 0.5rem 0.5rem;
+  border: 1px solid;
+  border-radius: 50%;
 }
 
 .btn-new-quote {
