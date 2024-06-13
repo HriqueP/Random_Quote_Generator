@@ -8,9 +8,9 @@ const author = document.querySelector(".author");
 // Refresh quote on button click
 async function showQuote() {
   const response = await fetch("https://api.quotable.io/random");
-  console.log(response);
+  // console.log(response);
   const data = await response.json();
-  console.log(data);
+  // console.log(data);
 
   const content = ` 
     <img src="./assets/open-quotes.png" width="20" />
@@ -19,6 +19,11 @@ async function showQuote() {
 
   phrase.innerHTML = content;
   author.innerText = "- " + data.author;
+}
+
+function copyQuote() {
+  navigator.clipboard.writeText(phrase.innerText);
+  alert("Copied to Clipbord");
 }
 
 // Quote when page first loads
